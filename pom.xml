@@ -1,0 +1,49 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.dso.restApiTest</groupId>
+	<artifactId>basicRestApiTest</artifactId>
+	<packaging>jar</packaging>
+	<version>1.0-SNAPSHOT</version>
+	<name>basicRestApiTest</name>
+	<description>Example of a rest service project with Spring Boot, tested with Rest Assured and integrated in cucumber.</description>
+	<url>https://github.com/dsolano23/basicRestApiTest</url>
+
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-parent - Date of the version 2.0.3.RELEASE - Jun 14, 2018 -->
+		<version>2.0.3.RELEASE</version>
+		<relativePath />
+	</parent>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<java.version>1.8</java.version>
+		<!-- https://mvnrepository.com/artifact/io.rest-assured/rest-assured - Date of the version 3.1.0 - Apr 20, 2018 -->
+		<restAssured.version>3.0.6</restAssured.version>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>io.rest-assured</groupId>
+			<artifactId>rest-assured</artifactId>
+			<version>${restAssured.version}</version>
+			<scope>test</scope>
+		</dependency>
+
+	</dependencies>
+</project>
