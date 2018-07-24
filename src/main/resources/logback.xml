@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+   <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+       <file>target/basicRestApiTest-out.log</file>
+       <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+           <fileNamePattern>target/basicRestApiTest-out-%d{dd-MM-yyyy}.log</fileNamePattern>
+           <maxHistory>5</maxHistory>
+           <totalSizeCap>10MB</totalSizeCap>
+       </rollingPolicy>
+       <encoder>
+           <pattern>%d{yyyy-MM-dd HH:mm:ss} | %-5p | [%thread] %logger{5}:%L - %msg%n</pattern>
+       </encoder>
+   </appender>
+   <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+       <layout class="ch.qos.logback.classic.PatternLayout">
+           <Pattern> %d{yyyy-MM-dd HH:mm:ss} %-5level %logger{36} - %msg%n
+           </Pattern>
+       </layout>
+   </appender>
+    <logger name="com.dso.restApiTest" level="INFO" /> 
+    <logger name="com.dso.restApiTest.models" level="DEBUG" /> 
+	<root level="INFO">
+		<appender-ref ref="FILE" />
+		<appender-ref ref="STDOUT" />
+	</root>
+</configuration>

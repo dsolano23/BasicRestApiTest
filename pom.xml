@@ -22,8 +22,6 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<java.version>1.8</java.version>
-		<!-- https://mvnrepository.com/artifact/io.rest-assured/rest-assured - Date of the version 3.1.0 - Apr 20, 2018 -->
-		<restAssured.version>3.0.6</restAssured.version>
 	</properties>
 
 	<dependencies>
@@ -41,9 +39,12 @@
 		<dependency>
 			<groupId>io.rest-assured</groupId>
 			<artifactId>rest-assured</artifactId>
-			<version>${restAssured.version}</version>
-			<scope>test</scope>
+			<!--<scope>test</scope>-->
 		</dependency>
-
+		
+        <dependency>
+           <groupId>org.projectlombok</groupId>
+           <artifactId>lombok</artifactId>
+       </dependency>
 	</dependencies>
 </project>
